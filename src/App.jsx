@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import SignUp from './components/SignUp';
 import { BrowserRouter } from 'react-router-dom';
 import * as authService from './services/authService';
+import { prototypejs } from 'globals';
 
 
 
@@ -22,7 +23,14 @@ const App = () => {
     setUser(null)
   }
 
-  
+  const handleChange = (evt) => {
+   setFormData ({...formData, })
+  }
+
+  const handleSubmit = (evt) => {
+      evt.preventDefault()
+    prototypejs.handleSignIn()
+  }
 
   return (
     <>
